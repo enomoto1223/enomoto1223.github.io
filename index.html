@@ -1,11 +1,32 @@
 <html>
 
-<head>
-<title>ゲームタイトル</title>                
-</head>
+	<head>
+		<title>ゲームタイトル</title>   
+	<script type="text/JavaScript">
+		function gameStart() {
+			  alert( "ゲーム開始！" );
+		}
+//--------------------------------------------------
+// レイヤー表示・非表示
+//	lyr = レイヤー名
+//	visf = 表示フラグ(表示ならtrue、非表示ならfalse)
+//--------------------------------------------------
+function lyrSetVisibility( lyr , visf ) {
+	  if ( visf ) {
+		      document.getElementById( lyr ).style.visibility = "visible";
+		    } else {
+			        document.getElementById( lyr ).style.visibility = "hidden";
+			      }
+}
+	</script>             
+	</head>
 
-<body>
-<img src="bb01.gif">
-</body>
+	<body>
+		<a href="JavaScript:gameStart()">押したらスタート</a>
+		<div id="lyrball"
+		          style="position:absolute; left:128px; top:128px;">
+			<img src="bb01.gif">
+		</div>
+	</body>
 
 </html>
